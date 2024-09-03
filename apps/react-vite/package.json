@@ -1,11 +1,11 @@
 {
-  "name": "bulletproof-react",
-  "version": "0.1.0",
+  "name": "bulletproof-react-vite",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build --base=/",
+    "dev": "node init && vite",
+    "build": "node init && tsc && vite build --base=/",
     "preview": "vite preview",
     "test": "vitest",
     "test-e2e": "pm2 start \"yarn run-mock-server\" --name server && yarn playwright test",
@@ -14,8 +14,8 @@
     "check-types": "tsc --project tsconfig.json --pretty --noEmit",
     "generate": "plop",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "run-mock-server": "vite-node mock-server.ts | pino-pretty -c"
+    "build-storybook": "node init && storybook build",
+    "run-mock-server": "node init && vite-node mock-server.ts | pino-pretty -c"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
